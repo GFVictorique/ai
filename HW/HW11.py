@@ -1,6 +1,5 @@
 import math
 
-# 定義棋盤和符號
 board = [' ' for _ in range(9)]
 player = 'X'
 computer = 'O'
@@ -11,9 +10,9 @@ def print_board(board):
 
 def is_winner(board, player):
     win_conditions = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8],  # 行
-        [0, 3, 6], [1, 4, 7], [2, 5, 8],  # 列
-        [0, 4, 8], [2, 4, 6]              # 對角線
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],  
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],  
+        [0, 4, 8], [2, 4, 6]              
     ]
     for condition in win_conditions:
         if all(board[i] == player for i in condition):
